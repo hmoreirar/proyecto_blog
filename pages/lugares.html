@@ -43,45 +43,62 @@
   <hr />
   <main>
     <!--contenedor principal-->
+    <section>
+      <div class="contenedor_lugares">
+        <div class="lugares_titulo">
+          <h1>Lugares de interés</h1>
+          <h2>Playa Pellines, Maule, Chile</h2>
+        </div>
+        <div class="lugares_texto">
+          <p>
+            Playa Pellines (o Los Pellines) se encuentra a unos 20 - 30 minutos al sur de Constitución, region del
+            Maule,
+            Chile, dentro de un pequeño poblado costero con casas, servicios y una caleta artesanal.
+            Forma parte de la conocida Ruta Caletas del Maule, recuperada tras el terremoto de 2010 para reactivar la
+            pesca local y
+            el turismo.
+            Su mar es generalmente tranquilo, lo que lo hace ideal para largas caminatas, pesca y actividades
+            familiares,
+            aunque no siempre apto para baño por corrientes y viento. Ofrece una extensa franja de arena oscura, rodeada
+            de vegetación y pinos, con un ambiente ideal para
+            desconectarse y disfrutar en calma</p>
+        </div>
+        <div class="gal_img_lugares__pellines">
+          <img src="../img/playa_pellines1.jpg" alt="" onclick="abrirLightbox(this)" />
+          <img src="../img/playa_pellines2.jpg" alt="" onclick="abrirLightbox(this)" />
+          <img src="../img/playa_pellines3.jpg" alt="" onclick="abrirLightbox(this)" />
+          <img src="../img/playa_pellines4.jpg" alt="" onclick="abrirLightbox(this)" />
+          <img src="../img/playa_pellines5.jpg" alt="" onclick="abrirLightbox(this)" />
+          <img src="../img/playa_pellines6.jpg" alt="" onclick="abrirLightbox(this)" />
+          <img src="../img/playa_pellines7.jpg" alt="" onclick="abrirLightbox(this)" />
+          <img src="../img/playa_pellines8.jpg" alt="" onclick="abrirLightbox(this)" />
+          <img src="../img/playa_pellines9.jpg" alt="" onclick="abrirLightbox(this)" />
+        </div>
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+          <span class="cerrar">&times;</span>
+          <img id="imagen-lightbox" src="">
+        </div>
+    </section>
+    <section class="buffer"></section>
     <div class="contenedor_lugares">
       <div class="lugares_titulo">
-        <h1>Lugares de interés</h1>
-        <h2>Playa Pellines, Maule, Chile</h2>
+        <h2>Vilches, Maule, Chile</h2>
       </div>
       <div class="lugares_texto">
         <p>
-          Playa Pellines (o Los Pellines) se encuentra a unos 20 - 30 minutos al sur de Constitución, region del Maule,
-          Chile, dentro de un pequeño poblado costero con casas, servicios y una caleta artesanal.
-        </p>
-        <p>
-          Forma parte de la conocida Ruta Caletas del Maule, recuperada tras el terremoto de 2010 para reactivar la
-          pesca local y
-          el turismo.
-        </p>
-        <p>Su mar es generalmente tranquilo, lo que lo hace ideal para largas caminatas, pesca y actividades familiares,
-          aunque no siempre apto para baño por corrientes y viento</p>
-        <p>Ofrece una extensa franja de arena oscura, rodeada de vegetación y pinos, con un ambiente ideal para
-          desconectarse y
-          disfrutar en calma</p>
+          Vilches es una localidad en la Región del Maule, Chile, conocida principalmente por ser la puerta de entrada a
+          la
+          Reserva Nacional Altos de Lircay. Es un destino popular para el ecoturismo y el turismo de aventura,
+          ofreciendo
+          una gran
+          variedad de paisajes y actividades.
+          Se encuentra a unos 70 km al este de Talca, la capital regional. Se puede llegar en auto por una carretera en
+          buen estado (mitad asfaltada) o en autobús desde la terminal de Talca. La localidad se divide en Vilches Bajo,
+          Medio y
+          Alto. Vilches Alto es el punto más cercano a la reserva y ofrece servicios turísticos.</p>
       </div>
-      <section>
-        <div class="imagenes_lugares__pellines">
-          <img src="../img/playa_pellines1.jpg" alt="" />
-          <img src="../img/playa_pellines2.jpg" alt="" />
-          <img src="../img/playa_pellines3.jpg" alt="" />
-          <img src="../img/playa_pellines4.jpg" alt="" />
-          <img src="../img/playa_pellines5.jpg" alt="" />
-          <img src="../img/playa_pellines6.jpg" alt="" />
-          <img src="../img/playa_pellines7.jpg" alt="" />
-          <img src="../img/playa_pellines8.jpg" alt="" />
-          <img src="../img/playa_pellines9.jpg" alt="" />
-        </div>
-      </section>
-      <section class="buffer"></section>
-
-
       <div class="contenedor_carrusel">
-        <h2>Cordillera Vilches</h2>
         <div class="carrusel">
 
           <div id="carouselExample" class="carousel slide">
@@ -94,6 +111,15 @@
               </div>
               <div class="carousel-item">
                 <img src="../img/vilches03.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../img/vilches04.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../img/vilches05.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../img/vilches06.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -108,11 +134,13 @@
         </div>
       </div>
     </div>
+    </div>
+
   </main>
   <hr />
 
   <footer>
-    <h3>Todos los derechos reservados©</h3>
+    <div>Todos los derechos reservados©</div>
     <a href="http://www.instagram.com" target="_blank"><img src="../img/instagram.png" /></a>
     <a href="http://www.facebook.com" target="_blank"><img src="../img/facebook.png" /></a>
     <a href="http://www.youtube.com" target="_blank"><img src="../img/youtube.png" /></a>
@@ -121,6 +149,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
+  <script src="../js/lightbox.js"></script>
 </body>
 
 </html>
