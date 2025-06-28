@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  --box-shadow-color: rgba(255, 215, 97, 0.48);
   scroll-behavior: smooth;
 
 /*! -----HEADER----- */
@@ -81,10 +80,10 @@ hr {
   align-items: center;
 }
 .about_me_container {
-  background-color: #F8F6F0;
+  background-color: rgba(var(--bs-tertiary-bg-rgb));
   text-align: center;
   padding: 2rem;
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
   
 }
 
@@ -200,10 +199,8 @@ hr {
   text-align: center;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 3rem 0;
+  padding: 1rem 0;
   gap: 1.6em;
-  transition: transform 0.4s ease-in-out;
-
 }
 
 .card {
@@ -218,8 +215,8 @@ hr {
   background-color: rgba(204, 204, 204, 0.863);
   box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
   overflow: hidden;
-
-}
+  transition: 0.3s ease-out;
+  }
 
 .card-img {
   width: 100%;
@@ -266,7 +263,7 @@ hr {
   ;
 }
 .card:hover{
-  transform: scale(1.1);
+  transform: scale(1.02);
 
 }
 
@@ -276,6 +273,67 @@ hr {
   min-height: 100vh;
   width:100%;
   background-color: rgba(var(--bs-tertiary-bg-rgb));
+}
+.contenedor_cajas_escritos h1 {
+
+font-size: 65px;
+letter-spacing: 0px;
+color: #000000;
+padding: 3rem 0 0;
+text-align: center;
+}
+.contenedor_cajas_escritos p {
+
+  font-size: 1rem;
+  letter-spacing: 0px;
+  color: #000000;
+  padding: 3rem 0 0;
+  text-align: left;
+  padding: 1rem 2rem;
+  }
+.card-horizontal-img-der{
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-direction: row-reverse;
+ height: 400px;
+}
+.card-horizontal-img-der .escritos_card-img {
+  width: 30%;
+  object-fit: cover;
+}
+.card-horizontal-img-der .escritos_card-content {
+  padding: 20px;
+  width: 70%;
+  text-align: left;
+  display: grid;
+}
+.card-horizontal-img-izq {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ height: 400px;
+
+}
+
+.card-horizontal-img-izq .escritos_card-img {
+  width: 30%;
+  object-fit: cover;
+}
+
+.card-horizontal-img-izq .escritos_card-content {
+  padding: 20px;
+  width: 70%;
+  text-align: left;
+  display: grid;
 }
 /*? -----MAIN lugares----- */
 
@@ -291,7 +349,7 @@ hr {
 .lugares_titulo h2 {
   font-size: 40px;
   color: #F8F6F0;
-  padding: 1rem 0 0;
+  padding: 1rem;
 }
 .lugares_texto p{
 text-align: justify;
@@ -342,8 +400,6 @@ margin: 1rem 3rem;
   font-weight: bold;
   cursor: pointer;
 }
-/** media query grid lugares**/
-
 .contenedor_carrusel {
   background-image: url("../img/bannerplaya.jpg");
   width:100%;
@@ -360,12 +416,6 @@ margin: 1rem 3rem;
   padding: 2rem;
 }
 
-.contenedor_cajas_escritos h1{
-  text-align: center;
-  font-size: 60px;
-  color: #F8F6F0;
-  padding: 80px 0 0;
-}
 .contenedor_cards{
   display: flex;
   justify-content: space-between;
@@ -380,30 +430,123 @@ margin: 1rem 3rem;
 }
 /**! -----formulario contacto----- */
 
-section div h2 {
-  text-align: center;
-  color: #333333;
-}
 .formulario__container {
-  background-color: #F8F6F0;
-  height: 100vh;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: rgba(var(--bs-tertiary-bg-rgb));
+}
+  /* Contenido en columna */
+.form-content {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
 }
 
-label {
+/* Encabezado */
+.form-header {
+  margin-bottom: 30px;
+}
+
+.form-header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form-header p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+/* Formulario */
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.contact-form label {
   display: block;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
-button {
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
   background-color: #007bff;
   color: white;
-  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+/** -----pag musica----- */
+
+.contenedor_musica {
+  padding: 1rem;
+  background-color: rgba(var(--bs-tertiary-bg-rgb));
+  min-height: 100vh;
+}
+.contenedor_musica h1{
+  font-size: 60px;
+        color: #000000;
+        padding: 3rem 0 0;
+        text-align: center;
+}
+.contenedor_musica p {
+  text-align: left;
+  padding: 2rem
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 /** -----FOOTER----- */
 
 footer {
-  background-color: rgba(var(--bs-tertiary-bg-rgb));  text-align: center;
+  background-color: rgba(var(--bs-tertiary-bg-rgb));text-align: center;
   position: relative;
   left: 0;
   bottom: 0;
@@ -417,13 +560,10 @@ footer div {
 .img__logo {
   width: 32px;
 }
-/** media query grid lugares**/
+/** media query index about me**/
 
 @media screen and (max-width: 992px) {
-  div h1,
-  h2 {
-    font-size: 30px;
-  }
+
   .about_me {
     flex-direction: column;
   align-items: center;
@@ -438,4 +578,28 @@ footer div {
          max-width: 600px;
 
 }
+}
+/** media query cards escritos**/
+
+@media (max-width: 768px) {
+  .card-horizontal-img-der {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+
+  }
+  .card-horizontal-img-izq {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .card-img, .card-content {
+    width: 100%;
+  }
+  .card-horizontal-img-der .escritos_card-img {
+    display: none;
+  }  .card-horizontal-img-izq .escritos_card-img {
+    display: none;
+  }
 }
