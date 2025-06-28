@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?Roboto:wght@400;700&family=Alfa+Slab+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+hr {
+  border: 5px solid black;
+  margin: 0;
+}
+.navbar-expand-lg .navbar-collapse {
+  justify-content: end;
+  width: min-content;
+}
+.buffer {
+  width: 100%;
+  min-height: 15vh;
+  background-color: #161616;
+}

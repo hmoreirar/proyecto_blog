@@ -1,0 +1,35 @@
+.contenedor_musica {
+  padding: 1rem;
+  background-color: rgba(var(--bs-tertiary-bg-rgb));
+  min-height: 100vh;
+  h1 {
+    font-size: 60px;
+    color: #000000;
+    padding: 3rem 0 0;
+    text-align: center;
+  }
+  p {
+    text-align: left;
+    padding: 2rem;
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Proporción 16:9 */
+      height: 0;
+      overflow: hidden;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    }
+  }
+}
